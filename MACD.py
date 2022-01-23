@@ -7,7 +7,7 @@ closing_prices = [89, 88, 88, 87, 84, 83, 84, 86, 88, 89, 90, 90, 91, 87, 87, 88
 def simple_moving_average(length, list):
     sum_of_prices = 0
     for i in range(length):
-        sum_of_prices = list[i] + sum_of_prices
+        sum_of_prices = list[i] + sum_of_prices 
     sma = sum_of_prices / length
     return sma
 
