@@ -6,6 +6,7 @@ To examine past price points of financial data using technical analysis to predi
 
 ## Setup Instructions
 ```
+pip install copy
 pip install random
 pip install pandas_datareader
 pip install datetime
