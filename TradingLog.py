@@ -2,9 +2,9 @@
 
 import GeneticAlgorithm
 
-individual = [19, 7, 73, 14, 24, 6, 67, 20]
+individual = [35, 13, 94, 15, 19, 20, 86, 14]
 
-ticker = 'GOOGL'
+ticker = 'V'
 
 data_frame = GeneticAlgorithm.acquire_data(ticker)
 
@@ -97,7 +97,7 @@ bahsold = bahshares * last_price
 bahreturn = (bahsold - bahbought) + 10000
 
 print('Total Capital after GA strategy: ', capital)
-print('Win Percentage', (win/trade) * 100)
+print('Win Percentage: ', (win/trade) * 100)
 print('Total Capital after Buy and Hold strategy: ', bahreturn)
 
 print(individual)
