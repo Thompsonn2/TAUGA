@@ -2,9 +2,7 @@ import pandas_datareader.data as pdr
 
 def generate(data_frame):
     #Difference between current and previous data frames
-    
     close = data_frame.Close
-    
     delta = close.diff()
 
     #Current is more than the previous value
