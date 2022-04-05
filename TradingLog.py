@@ -17,6 +17,8 @@ buy = 0
 sell = 1
 ret = 0
 capital = 10000
+win = 0
+trade = 0
 
 print(individual)
 
@@ -75,9 +77,12 @@ for i in range(0, len(close)):
         sold_price = close[i]
         sold = shares * sold_price
         ret = (sold - bought)
+        if ret >= 0:
+            win = win + 1
         capital = ret + capital
         buy = 0
         sell = 1
+        trade = trade + 1
         print('RSI sell interval', sell_value, 'Current RSI value', rsi_value_sell)
         print(shares, ' shares sold at ', sold_price,)
         print('Return: ', ret)
@@ -92,6 +97,7 @@ bahsold = bahshares * last_price
 bahreturn = (bahsold - bahbought) + 10000
 
 print('Total Capital after GA strategy: ', capital)
+print('Win Percentage', (win/trade) * 100)
 print('Total Capital after Buy and Hold strategy: ', bahreturn)
 
 print(individual)
